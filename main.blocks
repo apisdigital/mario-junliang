@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="B0h~p+FA#Owe@p_}G)2-">Player</variable><variable type="KIND_SpriteKind" id="y!`CfdhS{U/|RK-/E2Uj">Projectile</variable><variable type="KIND_SpriteKind" id="+J#w}+vKa$|=~k(w$?t@">Food</variable><variable type="KIND_SpriteKind" id="z[H4SNOsO(_q3663SDB9">Enemy</variable><variable id="4~z0-ss*A.:N~YEzO+cW">mySprite</variable><variable id="Eb8H_;daFojad)./.x=*">mario</variable><variable id="YFZTZx[?Wh|~Z3Wo-a[S">malo</variable></variables><block type="pxt-on-start" id="K0mOppS]?Wlba(Q]xM,p" x="0" y="0"><statement name="HANDLER"><block type="set_current_tilemap" id="[)ZA9yZ6Z3m*uWikQD#e"><value name="tilemap"><shadow type="tiles_tilemap_editor" id="V+q9$yi%dSee|:gUL`rA"><field name="tilemap">tilemap`nivel2`</field><data>{"commentRefs":[],"fieldData":{"tilemap":"nivel2"}}</data></shadow></value><next><block type="variables_set" id="L.=eEwrvMznWXlyhcP^="><field name="VAR" id="Eb8H_;daFojad)./.x=*">mario</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="A7:Lg6djB5QpU7Cw/2w3"><value name="img"><shadow type="screen_image_picker" id="W#ENYq0(wz$nXJgs6.45"><field name="img">img`
+. . . . . 2 2 2 2 2 2 . . . . . 
+. . . . 2 2 2 2 2 2 2 2 2 2 . . 
+. . . . e e e d d f d . . . . . 
+. . . e d e d d d f d d d . . . 
+. . . e d e d d d d f d d d . . 
+. . . e e d d d d f f f f . . . 
+. . . . . d d d d d d d . . . . 
+. . . . 2 2 8 2 2 2 . . . . . . 
+. . . 2 2 2 8 2 2 8 2 2 2 . . . 
+. . 2 2 2 2 8 8 8 8 2 2 2 2 . . 
+. . d d 2 8 5 8 8 5 8 2 d d . . 
+. . d d d 8 8 8 8 8 8 d d d . . 
+. . d d 8 8 8 8 8 8 8 8 d d . . 
+. . . . 8 8 8 . . 8 8 8 . . . . 
+. . . e e e . . . . e e e . . . 
+. . e e e e . . . . e e e e . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"W#ENYq0(wz$nXJgs6.45"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="10M4)@K}1U_eYr!h0OO~"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="camerafollow" id="t#u]Fu=GK@*q^B_pOFaN"><value name="sprite"><block type="variables_get" id="gQ-7t#ypcWuC9mJCOvwF"><field name="VAR" id="Eb8H_;daFojad)./.x=*">mario</field></block></value><next><block type="Sprite_blockCombine_set" id=",E]c:Z^U!d!,ecdT*!Bd"><field name="property">Sprite.ay@set</field><value name="mySprite"><block type="variables_get" id="+sFOI(3T6ztqdU4nEobw"><field name="VAR" id="Eb8H_;daFojad)./.x=*">mario</field></block></value><value name="value"><shadow type="math_number" id="ou2)I8WB5n@MN`fe`Ns/"><field name="NUM">300</field></shadow></value><next><block type="game_control_sprite" id="TTt^clPm+_CAlJ8e(uJD"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="4B:1c;Ta7HO*caq*p10_"><field name="VAR" id="Eb8H_;daFojad)./.x=*">mario</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="g|V$-BF_JX3sQZHJ!g}T"><field name="speed">100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="D+25wZ?B6AUa`5CZ*s5J"><field name="speed">0</field></shadow></value><next><block type="variables_set" id="3G^Gcer$#W@Yq)%pcUZl"><field name="VAR" id="YFZTZx[?Wh|~Z3Wo-a[S">malo</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="e%bO+l#$`bM?o}OS(1sZ"><value name="img"><shadow type="screen_image_picker" id="Fl|DAK((WxL#N`X8iP3y"><field name="img">img`
+. . . . . . e e e e . . . . . . 
+. . . . . e e e e e e . . . . . 
+. . . . e e e e e e e e . . . . 
+. . . e e e e e e e e e e . . . 
+. . e f f e e e e e e f f e . . 
+. e e e d f e e e e f d e e e . 
+. e e e d f f f f f f d e e e . 
+e e e e d f d e e d f d e e e e 
+e e e e d d d e e d d d e e e e 
+e e e e e e e e e e e e e e e e 
+. e e e e d d d d d d e e e e . 
+. . . . d d d d d d d d . . . . 
+. . f f d d d d d d d d f f . . 
+. f f f f d d d d d d f f f f . 
+. f f f f f f d d f f f f f f . 
+. . f f f f f d d f f f f f . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"Fl|DAK((WxL#N`X8iP3y"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="~1HO7~qKfxj[P~b}`BR*"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="mapplaceontile" id="6Xa-:C9E]GSph1n#A$ux"><value name="sprite"><block type="variables_get" id="xG6!cp}ENUwc~CnZ$[EE"><field name="VAR" id="YFZTZx[?Wh|~Z3Wo-a[S">malo</field></block></value><value name="loc"><shadow type="mapgettile" id="26_(W^)^+B[!g;+Lk|C!"><value name="col"><shadow type="math_number" id="|?v[2f{[JY2plM$S=_[L"><field name="NUM">15</field></shadow></value><value name="row"><shadow type="math_number" id="DxFii{AK#}RZN`tayL_j"><field name="NUM">7</field></shadow></value></shadow></value><next><block type="Sprite_blockCombine_set" id="ox8GB:PqX=Xp(rth}skx"><field name="property">Sprite.vx@set</field><value name="mySprite"><block type="variables_get" id="LlNQ=.725AiJUgR7RLJ?"><field name="VAR" id="YFZTZx[?Wh|~Z3Wo-a[S">malo</field></block></value><value name="value"><shadow type="math_number" id="!PHBmfAyPpf.Y0Y|e6Gy"><field name="NUM">40</field></shadow></value><next><block type="spritesetsetbounceonwall" id="vtjfQ*+cv-|ew$i^aCYf"><value name="sprite"><block type="variables_get" id="WJDzEcH{5)k-x1aK)1U."><field name="VAR" id="YFZTZx[?Wh|~Z3Wo-a[S">malo</field></block></value><value name="on"><shadow type="toggleOnOff" id=")I7OMBA||-|uG$eJ:mB2"><field name="on">true</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="keyonevent" id="cNoK.+@IM#i$X}6hNU?F" x="630" y="270"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="Sprite_blockCombine_set" id="~F.x=[j^xsqVDR^D(P$Y"><field name="property">Sprite.vy@set</field><value name="mySprite"><block type="variables_get" id="dJ%-w~%E[b@=WW6UG$%`"><field name="VAR" id="Eb8H_;daFojad)./.x=*">mario</field></block></value><value name="value"><shadow type="math_number" id=";#Yo!KWiWqMDlYn)N+rS"><field name="NUM">-150</field></shadow></value></block></statement></block></xml>
